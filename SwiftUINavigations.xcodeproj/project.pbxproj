@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0A90C3802F498BBB00B4457E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0A90C37F2F498BB100B4457E /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0A1A6FA82F4877850033AA96 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		0A1A6F9A2F4877840033AA96 /* SwiftUINavigations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUINavigations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A1A6FA72F4877850033AA96 /* SwiftUINavigationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUINavigationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A1A6FB12F4877850033AA96 /* SwiftUINavigationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUINavigationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A90C37F2F498BB100B4457E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		0A1A6F912F4877840033AA96 = {
 			isa = PBXGroup;
 			children = (
+				0A90C37F2F498BB100B4457E /* README.md */,
 				0A1A6F9C2F4877840033AA96 /* SwiftUINavigations */,
 				0A1A6FAA2F4877850033AA96 /* SwiftUINavigationsTests */,
 				0A1A6FB42F4877850033AA96 /* SwiftUINavigationsUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A90C3802F498BBB00B4457E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
