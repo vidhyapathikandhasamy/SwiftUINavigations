@@ -12,37 +12,38 @@ struct CustomerDetails: Identifiable, Hashable {
     let id: UUID = UUID()
 }
 
-enum Route: Hashable {
-    case home
-    case detail(CustomerDetails)
-}
+
 
 struct ProgramaticNavigation: View {
     
-    @State private var routes: [Route] = []
+    @EnvironmentObject private var navigationStore: NavigationStore
     
     var body: some View {
-        NavigationStack(path: $routes) {
             VStack {
                 Button("Home") {
-                    routes.append(.home)
+                    navigationStore.route.append(.home)
                 }
                 Button("Details") {
-                    routes.append(.detail(CustomerDetails(name: "Vidhyapathi")))
+                    navigationStore.route.append(.detail(CustomerDetails(name: "Vidhyapathi")))
                 }
-                .navigationDestination(for: Route.self) { route in
-                    switch route {
-                    case .home:
-                        Text("Home")
-                    case .detail(let customer):
-                        Text(customer.name)
-                    }
-                }
+                
             }
-        }
+        
     }
 }
 
 #Preview {
-    ProgramaticNavigation()
+    NavigationStack {
+        ProgramaticNavigation()
+            .environmentObject(NavigationStore())
+            .navigationDestination(for: Route.self) { route in
+                switch route {
+                case .home:
+                    Text("Home")
+                case .detail(let customer):
+                    Text(customer.name)
+                }
+            }
+        
+    }
 }
